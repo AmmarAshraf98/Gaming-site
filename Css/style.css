@@ -1,0 +1,183 @@
+/* global variable */
+:root {
+    --main-font: 'Comfortaa', cursive;
+    --second-font: 'Nerko One', cursive;
+    --main-color: #272b30;
+    --second-color: #3a497b;
+    --active-color: #0a8bbe;
+    --normal-color: #4a6792;
+    --border-color: #202328;
+    --color-text: #fff;
+    color: #0d6efd
+}
+
+/* ; */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--second-font);
+}
+
+body {
+    font-family: var(--main-font);
+}
+
+/* <!------------------------- G A M E S    S E C T I O N  -----------------------------------------> */
+.games {
+    background-color: var(--main-color);
+    min-height: 100vh;
+}
+
+/* header */
+.games header img {
+    max-height: 30vh;
+    object-fit: cover;
+}
+
+/* navbar */
+.navbar {
+    background-color: var(--second-color);
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+    margin-top: -30px;
+}
+
+.navbar .navbar-brand:hover {
+    color: var(--color-text);
+}
+
+.navbar h5 {
+    font-family: var(--second-font);
+    color: var(--color-text);
+}
+
+.navbar .logo-img {
+    width: 40px;
+}
+
+.navbar .navbar-nav .nav-link {
+    color: var(--color-text);
+    text-transform: uppercase;
+    font-size: 12.5px;
+    transition: all .3s;
+}
+
+.navbar .navbar-nav .nav-link:hover {
+    color: var(--active-color);
+}
+
+.navbar .navbar-nav .nav-link.active {
+    color: var(--active-color);
+}
+
+
+/* card style */
+.item {
+    border-radius: 7px;
+    transition: all .3s;
+}
+
+.item figure img {
+    transition: all .3s;
+    transition-delay: .3s;
+    filter: grayscale(0.7);
+}
+
+.item:hover {
+    scale: 1.03;
+}
+
+.item:hover figure img {
+    filter: grayscale(0);
+}
+
+.item:hover .badge-color {
+    background-color: var(--active-color);
+}
+
+.badge-color {
+    transition: all .3s;
+    background-color: #4a6792;
+}
+
+.card {
+    background-color: var(--main-color);
+    border-radius: inherit;
+    color: var(--color-text);
+}
+
+
+/* <!------------------------- G A M E S   D E T A I L S -----------------------------------------> */
+.game-details {
+    background-color: var(--main-color);
+    min-height: 100vh;
+}
+
+.card {
+    border: none;
+}
+
+.item {
+    min-height: 100%;
+    border: 1px solid var(--border-color);
+    border-radius: 7px;
+}
+
+
+
+
+
+/* <!------------------------- G A M E S    L O A D E R  -----------------------------------------> */
+.loader {
+    position: fixed;
+    z-index: 9999;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.loader>span {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border-top: 4px solid #fff;
+    border-right: 4px solid transparent;
+    animation: loop 1s infinite linear;
+}
+
+.loader span::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border-bottom: 4px solid red;
+    border-right: 4px solid transparent;
+    animation: loopl .5s infinite linear;
+}
+
+
+@keyframes loop {
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes loopl {
+    0% {
+        transform: rotate(360deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}

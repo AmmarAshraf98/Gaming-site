@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gamming Site</title>
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="./Css/bootstrap.min.css">
+    <!-- google font link -->
+    <!-- <link
+        href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Nerko+One&display=swap"
+        rel="stylesheet"> -->
+    <!-- style css file -->
+    <link rel="stylesheet" href="./Css/style.css">
+</head>
+
+<body>
+    <!------------------------- G A M E S    C A R D E S      S E C T I O N ----------------------------------------->
+    <section class="games" id="games">
+
+        <!-------------------------  H E A D E R ----------------------------------------->
+        <header>
+            <img src="./image/wraper.png" class="w-100" alt="game logo">
+        </header>
+
+        <!------------------------- N A V B A R  ----------------------------------------->
+        <nav class="navbar navbar-expand-lg position-sticky top-0 z-3 col-md-6 col-lg-9 mx-auto">
+            <div class="container">
+
+                <h5 class="navbar-brand text-uppercase mb-0">
+                    <img src="./image/logo-sm.png" class="logo-img" alt="">
+                    GAME REVIEWS
+                </h5>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse " id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" role="button" data-category="mmorpg" aria-current="page"
+                                href="#">MMORPG</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-category="shooter" href="#">SHOOTER</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-category="sailing" href="#">SAILING</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-category="permadeath" href="#">PERMADEATH</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-category="superhero" href="#">superhero</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-category="pixel" href="#">pixel</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!------------------------- G A M E S    C A R D S  ----------------------------------------->
+        <div class="games-card">
+            <div class="container py-5">
+                <div class="row justify-content-center g-4" id="myData">
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!------------------------- G A M E S    D E T A I L S       S E C T I O N----------------------------------------->
+    <section class="game-details d-none" id="details">
+        <div class="container">
+            <header class="details text-white d-flex align-items-center justify-content-between">
+                <h2 class="text-center py-4 h3">Details Game</h2>
+                <button class="btn-close btn-close-white" id="btnClose"></button>
+            </header>
+
+            <div class="row g-4" id="details-data">
+            </div>
+        </div>
+    </section>
+
+    <!------------------------- G A M E S    L O A D E R  ----------------------------------------->
+    <div class="loader d-flex justify-content-center align-items-center d-block">
+        <span class="white"></span>
+    </div>
+
+    <!-- file js for bootstrap -->
+    <script src="./Js/bootstrap.bundle.min.js"></script>
+    <!-- main js -->
+    <script type="module" src="./Js/main.js"></script>
+</body>
+
+</html>
